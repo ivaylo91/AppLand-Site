@@ -1,0 +1,285 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    box-sizing: inherit;
+}
+
+.sit-header {
+    background: url("../img/bg-header.jpg") no-repeat;
+    background-size: cover;
+    height: 998px;
+    padding: 40px;
+}
+
+.logo {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2em;
+    font-size: 1.375em;
+}
+
+.f-letters {
+    color: #fcae61;
+}
+
+.s-letters {
+    color: #000000;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-right: 5em;
+}
+
+nav li {
+    margin-left: 2em;
+    padding: 5px 10px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #000;
+    font-family: Poppins, sans-serif;
+}
+
+nav li a:hover {
+    color: #c0c0c0;
+    cursor: pointer;
+}
+
+.try-btn {
+    background: #2500f9;
+    color: #fff;
+    padding: 0.4em;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+input[type=submit] {
+    border: none;
+    width: 150px;
+}
+
+input[type=submit]:hover {
+    background: #add8e6;
+}
+
+.header-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.header-section img {
+    width: 30%;
+    height: 30%;
+    margin-left: 3em;
+}
+
+.header-section article {
+    line-height: 1.6em;
+    margin-top: 15%;
+}
+
+article span {
+    font-family: Poppins, sans-serif;
+    background: #e2eaed;
+    border-radius: 20px;
+    padding: 0.4em;
+    position: relative;
+}
+
+article span:before {
+    content: url("../img/span-img.png");
+    position: absolute;
+    top: 0.1em;
+    left: -2em;
+    background: #fcae61;
+    padding: 0.35em;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+article p {
+    margin: 0.75em 0 1em 0;
+    width: 400px;
+    font-family: Poppins, sans-serif;
+}
+
+article h1 {
+    font-family: Poppins, sans-serif;
+    font-size: 1.875em;
+    margin-top: 0.75em;
+    font-weight: 500;
+    width: 350px;
+    line-height: 1.6em;
+}
+
+article input {
+    margin-right: 2em;
+}
+
+article a {
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+}
+
+article a:hover {
+    color: #c0c0c0;
+}
+
+.companies h1 {
+    text-align: center;
+    margin: 2.5em;
+    font-family: Poppins, sans-serif;
+}
+
+.companies ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.companies ul li {
+    margin-left: 5em;
+}
+
+.apps-section img {
+    float: left;
+}
+
+.apps-section article {
+    float: left;
+    margin-top: 5%;
+}
+
+.apps-section article img {
+    margin-right: 0.75em;
+}
+
+.apps-section article p {
+    text-align: justify;
+    color: #616368;
+    line-height: 1.5em;
+}
+
+.apps-section article h2 {
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+}
+
+.vector h2 {
+    color: #40975f;
+}
+
+.prototype h2 {
+    color: #2500f9;
+}
+
+.speed h2 {
+    color: #ff0000;
+}
+
+.smart-section article {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.smart-section article p {
+    margin: 2.5em 3em;
+    border-left: 1px solid #ccc;
+    padding: 3em;
+    color: #616368;
+    line-height: 1.5em;
+}
+
+.smart-section article h1 {
+    margin: 2em 0 0 2em;
+    color: #242f51;
+}
+
+.performance {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.performance p, .performance h2 {
+    font-family: Poppins, sans-serif;
+}
+
+.performance h2 {
+    margin: 2em 0 1em 0;
+}
+
+.performance img {
+    margin: 3em 0 2em 0;
+}
+
+.performance p {
+    max-width: 300px;
+    line-height: 1.5em;
+    color: #616368;
+}
+
+.automatic h2 {
+    color: #ff0000;
+}
+
+.network h2 {
+    color: #2500f9;
+}
+
+.bigger h2 {
+    color: #40975f;
+}
+
+.design {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4em;
+    border-bottom: 1px solid #ccc;
+}
+
+.design img {
+    width: 30%;
+    height: 30%;
+    margin-right: 3em;
+    margin-bottom: 2em;
+}
+
+.design article {
+    margin: 4em 2.5em 0 0;
+}
+
+.design p {
+    color: #616368;
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+.design h2 {
+    font-family: Poppins, sans-serif;
+    font-size: 1.75em;
+    width: 300px;
+    line-height: 1.5em;
+}
+
+.choose-app {
+    width: 30%;
+    margin: 40px auto;
+}
+
+.choose-app  h1 {
+    width: 20%;
+}
