@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a66378ce-595c-4d10-bec6-cb98cacb547a" name="Default Changelist" comment="ultimate features section finished">
+    <list default="true" id="a66378ce-595c-4d10-bec6-cb98cacb547a" name="Default Changelist" comment="more of site is done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -44,7 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606480335706</updated>
       <workItem from="1606480336811" duration="16142000" />
-      <workItem from="1606510553647" duration="26410000" />
+      <workItem from="1606510553647" duration="29187000" />
     </task>
     <task id="LOCAL-00001" summary="add others sections to website">
       <created>1606514647519</created>
@@ -60,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606553666297</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="more of site is done.">
+      <created>1606594520201</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606594520201</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,17 +76,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add others sections to website" />
     <MESSAGE value="ultimate features section finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="ultimate features section finished" />
+    <MESSAGE value="more of site is done." />
+    <option name="LAST_COMMIT_MESSAGE" value="more of site is done." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="0" key="CommitChangelistDialog2" timestamp="1606555491701">
+    <state x="583" y="0" key="CommitChangelistDialog2" timestamp="1606594524897">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606555491701" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1606594506322">
+    <state x="583" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606594524897" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1606598319033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606594506322" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606598319033" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606552403861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -10,15 +10,16 @@ html, body {
     background: url("../img/bg-header.jpg") no-repeat;
     background-size: cover;
     height: 998px;
-    padding: 40px;
+    padding: 50px;
 }
 
 .logo {
     font-family: "Poppins", sans-serif;
     text-decoration: none;
     font-weight: bold;
-    padding: 2em;
+    padding: 5em;
     font-size: 1.375em;
+
 }
 
 .f-letters {
@@ -29,30 +30,30 @@ html, body {
     color: #000000;
 }
 
-nav ul {
+.site-header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
     margin-right: 5em;
 }
 
-nav li {
+.site-header nav li {
     margin-left: 2em;
     padding: 5px 10px;
 }
 
-nav li a {
+.site-header nav li a {
     text-decoration: none;
     color: #000;
     font-family: Poppins, sans-serif;
 }
 
-nav li a:hover {
+.site-header nav li a:hover {
     color: #c0c0c0;
     cursor: pointer;
 }
 
-.try-btn {
+.site-header .try-btn {
     background: #2500f9;
     color: #fff;
     padding: 0.4em;
@@ -594,6 +595,7 @@ i.fa.fa-arrow-left,i.fa.fa-arrow-right{
 .download-section{
     width: 100%;
     position: relative;
+    margin-top: 5%;
 }
 .download-section h1{
     font-family: "Poppins", sans-serif;
@@ -617,6 +619,54 @@ i.fa.fa-arrow-left,i.fa.fa-arrow-right{
 }
 .download-bg{
     position: absolute;
-    top: 80%;
-    left: 50%;
+    top: -70%;
+    left: 60%;
+    width: 40%;
+}
+.site-footer{
+    background-color: #09142e;
+    max-height: 60%;
+    margin-top: 2em;
+    padding: 3em;
+}
+.site-footer span.s-letters {
+    color:#fff;
+}
+.site-footer header{
+    width: 10%;
+    margin: 20px auto;
+}
+.site-footer nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+.site-footer nav ul li{
+    margin-left: 2em;
+}
+.site-footer nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+.site-footer ul.social{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+.site-footer ul.social li {
+    margin-left: 1.75em;
+    font-size: 1.5em;
+}
+.site-footer ul.social a{
+    color:#273043;
+}
+.site-footer ul.social a:hover{
+    color:#fff;
+    cursor: pointer;
+}
+.site-footer p{
+    text-align: center;
+    margin-top: 4em;
+    color:#273043;
 }
