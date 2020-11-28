@@ -44,11 +44,37 @@
       <option name="presentableId" value="Default" />
       <updated>1606480335706</updated>
       <workItem from="1606480336811" duration="16142000" />
-      <workItem from="1606510553647" duration="3944000" />
+      <workItem from="1606510553647" duration="7529000" />
     </task>
+    <task id="LOCAL-00001" summary="add others sections to website">
+      <created>1606514647519</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606514647519</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add others sections to website" />
+    <option name="LAST_COMMIT_MESSAGE" value="add others sections to website" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="583" y="0" key="CommitChangelistDialog2" timestamp="1606514646968">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="583" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606514646968" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1606514696710">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606514696710" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606552403861">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606552403861" />
   </component>
 </project>
