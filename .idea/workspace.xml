@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a66378ce-595c-4d10-bec6-cb98cacb547a" name="Default Changelist" comment="" />
+    <list default="true" id="a66378ce-595c-4d10-bec6-cb98cacb547a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/media-queries.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/prototype.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/prototype.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/trusted-company-5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/trusted-company-5.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +48,7 @@
       <updated>1606480335706</updated>
       <workItem from="1606480336811" duration="16142000" />
       <workItem from="1606510553647" duration="29236000" />
+      <workItem from="1606598448643" duration="6203000" />
     </task>
     <task id="LOCAL-00001" summary="add others sections to website">
       <created>1606514647519</created>
@@ -70,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606598341304</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="site is finished with html and part of css.">
+      <created>1606598457611</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606598457611</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,14 +99,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="site is finished with html and part of css." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="0" key="CommitChangelistDialog2" timestamp="1606598340540">
+    <state x="583" y="0" key="CommitChangelistDialog2" timestamp="1606598456939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606598340540" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1606598319033">
+    <state x="583" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606598456939" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1606598462232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606598319033" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606598462232" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606552403861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
