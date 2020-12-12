@@ -919,3 +919,380 @@ header article a {
         flex-direction: row;
     }
 }
+@media(width: 375px)  {
+    .features-articles {
+        display: flex;
+        flex-direction: column;
+    }
+    .left-side, .right-side {
+        padding: 0;
+    }
+
+    .left-side header, .right-side header {
+        background: linear-gradient(#ffff, #f5f8fa);
+        padding-bottom: 0.5em;
+    }
+    .customer-section img {
+        width: 100%;
+        height: 100%;
+        margin: 2em auto;
+    }
+    .questions-header {
+        background: #f5f7fa;
+        padding: 1em;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        margin-left: 2em;
+    }
+    .questions-article h2 {
+        margin-left: 1em;
+        color: #242f51;
+    }
+
+    .questions-article p {
+        width: 80%;
+        color: #abadb1;
+        margin-left: 2em;
+    }
+}
+@media(width: 1024px) {
+    .header-section {
+        display: flex;
+    }
+
+    .header-section img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .header-section article {
+        width: 40%;
+    }
+
+    section.header-section article span {
+        width: 75%;
+        margin-left: 0.5em;
+    }
+
+    .header-section article input {
+        margin-left: 0.75em;
+    }
+
+    .header-section article a {
+        margin-left: 1em;
+    }
+
+    .companies {
+        margin-top: 3em;
+    }
+
+    .companies ul {
+        display: flex;
+        margin-top: 3em;
+        margin-left: 2em;
+        justify-content: center;
+    }
+
+    .companies ul li {
+        margin-left: 1.5em;
+    }
+
+    .apps-section {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2em;
+    }
+
+    .apps-section img.phone-img {
+        width: 55%;
+        height: 55%;
+        margin: -1em;
+        padding-right: 2em;
+    }
+
+    .apps-articles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .apps-articles h1 {
+        width: 60%;
+    }
+    .smart-section {
+        width: 85%;
+    }
+    .smart-section article {
+        display: flex;
+        margin: 3em auto;
+    }
+
+    .smart-section article p {
+        margin-top: 2em;
+        border-left: 1px solid #eeeeee;
+        padding-left: 2em;
+    }
+
+    .performance {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2.5em;
+        width: 92%;
+    }
+
+    .performance article {
+        margin-left: 2em;
+    }
+
+    .design {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2.5em;
+    }
+
+    .design article {
+        margin-left: 2.5em;
+    }
+
+    .design-img {
+        width: 50%;
+        height: 50%;
+        margin-right: 2em;
+    }
+
+    .choose-app {
+        margin: 0 auto;
+        width: 45%;
+        text-align: center;
+    }
+
+    .choose-app h1 {
+        width: 70%;
+        margin: 1em auto;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2em;
+    }
+
+    .testimonials article {
+        width: 40%;
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+    .features{
+        width: 100%;
+    }
+    .features header {
+        margin-left: 3em;
+    }
+
+    .features header h2 {
+        width: 35%;
+    }
+
+    .features header p {
+        width: 45%;
+    }
+
+    .features header {
+        margin-bottom: 1em;
+    }
+
+    .features-main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 1em;
+        width: 85%;
+    }
+
+    .features-main article {
+        width: 42%;
+        margin-left: 1em;
+    }
+
+    .see-all {
+        width: 20%;
+        height: 20%;
+        margin-left: 2em;
+    }
+
+    .phones {
+        width: 40%;
+        height: 40%;
+
+    }
+
+    .features-articles {
+        display: flex;
+    }
+
+    .payment-billing {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        width: 85%;
+    }
+
+    .billing-section h1 {
+        font-weight: 600;
+        color: #242f51;
+    }
+
+    .billing-section span {
+
+    }
+
+    .billing-section h2 {
+        width: 45%;
+        text-align: center;
+        margin: 2em auto;
+    }
+
+    .billing-section h3 {
+        color: #242f51;
+        font-weight: 600;
+    }
+
+    .billing-section p {
+        width: 70%;
+        text-align: center;
+        margin: 2em auto;
+        color: #b0b1b3;
+    }
+
+    .payment {
+        width: 25%;
+    }
+
+    .trial {
+        display: inline-block;
+    }
+
+    .left-side, .right-side {
+        padding: 0;
+    }
+
+    .left-side header, .right-side header {
+        background: linear-gradient(#ffff, #f5f8fa);
+        padding-bottom: 0.5em;
+    }
+
+    .left-side h1, .right-side h1 {
+        margin: 0;
+    }
+
+    .subscribe {
+        margin-bottom: 1em;
+    }
+
+    .trial-btn {
+        margin-top: 1em;
+    }
+
+    .customer-section {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3em;
+    }
+
+    .customer-section img {
+        width: 60%;
+        height: 60%;
+        margin-left: -2em;
+    }
+
+    .customer-section article {
+        margin-left: 1em;
+    }
+
+    .customer-section h1 {
+        font-weight: 600;
+        color: #242f51;
+        width: 100%;
+    }
+
+    .customer-section article p {
+        color: #616368;
+    }
+
+    .arrow-btn {
+        margin-top: 50%;
+        font-size: 13px;
+        background: #fff;
+    }
+
+    .questions header h1 {
+        text-align: center;
+        margin: 2em 0 1em 0;
+        font-weight: 500;
+        color: #242f51;
+    }
+
+    .questions header p {
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+        color: #616368;
+    }
+
+    .questions ul {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .questions-article h2 {
+        margin-left: 2em;
+        color: #242f51;
+    }
+
+    .questions-article p {
+        width: 90%;
+        color: #abadb1;
+    }
+
+    .questions-header {
+        width: 67%;
+        margin-left: 18%;
+        background: #f5f7fa;
+        padding: 1em;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+
+    .questions ul li {
+        color: #242f51;
+    }
+    .download-section{
+        position: relative;
+    }
+    .download-section h1 {
+        font-weight: 500;
+        color: #242f51;
+    }
+
+    .download-section p {
+        width: 70%;
+        color: #abadb1;
+    }
+
+    .download-stores {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .download-bg {
+        width: 60%;
+        position: absolute;
+        bottom: -2em;
+        left: 57%;
+    }
+    .site-footer nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+}
