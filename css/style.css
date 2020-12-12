@@ -1270,7 +1270,9 @@ ul.social {
         width: 42%;
         margin-left: 1em;
     }
-
+    .features-articles{
+        margin: 2em auto;
+    }
     .see-all {
         width: 20%;
         height: 20%;
