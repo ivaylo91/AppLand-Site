@@ -1296,3 +1296,100 @@ header article a {
         flex-direction: row;
     }
 }
+@media(width: 834px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2em;
+    }
+    .site-header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    section.header-section article span{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .site-header img{
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .header-section article h1{
+        font-weight: 600;
+        color: #242f51;
+        width: 75%;
+        margin: 1em auto;
+    }
+    .header-section article p{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .header-section article input{
+       margin-left: 5em;
+        margin-top: 1.5em;
+    }
+    .header-section article a{
+        margin-left: 1em;
+    }
+    .features-articles{
+        display: flex;
+        flex-direction: column;
+    }
+    .payment{
+        width: 30%;
+    }
+    .left-side, .right-side {
+        padding: 0;
+    }
+
+    .left-side header, .right-side header {
+        background: linear-gradient(#ffff, #f5f8fa);
+        padding-bottom: 1em;
+    }
+
+    .left-side h1, .right-side h1 {
+        margin: 0;
+        font-weight: 600;
+    }
+    .right-side a {
+        margin-bottom: 1em;
+    }
+    .trial-btn{
+        margin-bottom: 1em;
+    }
+    .left-side h3, .right-side h3{
+        font-weight: 500;
+    }
+    .customer-section img{
+        margin: 2em auto;
+    }
+    .arrow-btn{
+        margin-top: 35%;
+    }
+    .questions-article h2 {
+        margin-left: 2em;
+        color: #242f51;
+    }
+
+    .questions-article p {
+        width: 90%;
+        color: #abadb1;
+    }
+
+    .questions-header {
+        width: 95%;
+        margin-left: 5%;
+        background: #f5f7fa;
+        padding: 1em;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+    .questions header h1{
+        margin-left: 1.5em;
+    }
+
+}
