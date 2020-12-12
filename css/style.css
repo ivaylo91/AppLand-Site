@@ -10,7 +10,17 @@ html, body {
 body {
     font: 16px/1.5 "Poppins", sans-serif;
 }
-
+#nav-bar{
+    display: flex;
+    justify-content: right;
+    margin-right: 2em;
+    text-decoration: none;
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+#site-navigation{
+    display: none;
+}
 .site-header {
     display: flex;
     flex-direction: column;
@@ -479,6 +489,16 @@ ul.social {
         justify-content: center;
         margin-bottom: 2em;
     }
+    #nav-bar{
+        display: flex;
+        justify-content: right;
+        margin-right: 2em;
+        text-decoration: none;
+        font-size: 2em;
+    }
+    #site-navigation{
+        display: none;
+    }
     .site-header nav ul {
         display: flex;
         flex-direction: column;
@@ -691,6 +711,12 @@ ul.social {
 }
 
 @media (min-width: 1280px) {
+    #nav-bar {
+        display: none;
+    }
+    #site-navigation{
+        display: flex;
+    }
   .header {
       display: flex;
       flex-direction: row;
@@ -1427,6 +1453,7 @@ ul.social {
     }
 }
 @media(width: 834px) {
+
     .header{
         display: flex;
         flex-direction: column;
@@ -1530,6 +1557,12 @@ ul.social {
     }
 }
 @media(min-width: 1920px) {
+    #nav-bar {
+        display: none;
+    }
+    #site-navigation{
+        display: flex;
+    }
     section.header-section img{
         width: 20%;
         height: 20%;

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a66378ce-595c-4d10-bec6-cb98cacb547a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
       <workItem from="1606855781186" duration="22290000" />
       <workItem from="1607032517172" duration="818000" />
       <workItem from="1607092961070" duration="16965000" />
-      <workItem from="1607695002989" duration="18460000" />
+      <workItem from="1607695002989" duration="21904000" />
     </task>
     <task id="LOCAL-00001" summary="add others sections to website">
       <created>1606514647519</created>
