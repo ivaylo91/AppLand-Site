@@ -22,6 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: -3em;
 }
 
 .site-header nav ul li {
@@ -102,12 +103,12 @@ input[type=submit]:hover {
     width: 75%;
 }
 
-.header-section article input {
-    margin-left: 2em;
+section.header-section article input {
+    margin-left: 0.5em;
 }
 
-header article a {
-    margin-left: 1em;
+section.header-section article a {
+    margin-left: 1.3em;
     text-decoration: none;
 }
 
@@ -209,7 +210,12 @@ header article a {
     width: 75%;
     margin: auto;
 }
-
+.features-articles {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: -3em;
+}
 .see-all {
     border: none;
     background: #2500f9;
@@ -224,9 +230,9 @@ header article a {
     margin: 3em auto;
 }
 
-.payment {
+div.payment {
     border: 1px solid #eee;
-    width: 50%;
+    width: 55%;
     text-align: center;
     padding: 0.5em;
     margin: auto;
@@ -261,7 +267,13 @@ header article a {
     margin-top: 2em;
     padding: 2em;
 }
-
+.left-side header, .right-side header{
+    background: linear-gradient(#ffff, #f5f8fa);
+    padding-bottom: 1em;
+}
+.left-side,.right-side{
+    padding: 0;
+}
 .left-side span, .right-side span {
     font-weight: normal;
     font-size: 0.6em;
@@ -281,6 +293,7 @@ header article a {
     border-radius: 20px;
     border: none;
     padding: 0.5em;
+    margin-bottom: 1em;
 }
 
 .customer-section img {
@@ -325,9 +338,9 @@ header article a {
     text-align: center;
 }
 
-.arrow-btn {
+ul.arrow-btn {
     display: flex;
-    margin-top: 50%;
+    margin-top: 60%;
 }
 
 .fa.fa-arrow-circle-left, .fa-arrow-circle-right {
@@ -346,7 +359,17 @@ header article a {
     flex-direction: column;
     margin: auto;
 }
-
+section.questions h1 {
+    font-weight: 600;
+}
+section.questions p {
+    margin-left: 2em;
+}
+.questions-header {
+    background: #f5f7fa;
+    margin-left: 2em;
+    padding: 0.5em;
+}
 .questions article li {
     margin-bottom: 2em;
     background: #f5f7fa;
@@ -354,20 +377,25 @@ header article a {
     width: 100%;
     list-style: none;
 }
-
 .questions article li:after {
     content: url("../img/plus.png");
     float: right;
     margin-top: auto;
 }
-
 .download-section {
     display: flex;
     flex-direction: column;
     width: 75%;
     margin: auto;
+    font-weight: 600;
 }
-
+.download-section h1{
+    font-weight: 600;
+}
+.download-section p {
+    font-weight: 500;
+    color:#abadb1;
+}
 .download-stores {
     display: flex;
     justify-content: center;
@@ -418,9 +446,10 @@ header article a {
     color: #616368;
 }
 
-.social {
+ul.social {
     display: flex;
     justify-content: center;
+    margin-left: -5em;
 }
 
 .social li {
@@ -662,7 +691,19 @@ header article a {
 }
 
 @media (min-width: 1280px) {
-
+  .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+    .header nav ul {
+        display: flex;
+        flex-direction: row;
+        margin-right: 3em;
+    }
+    .header nav ul li{
+        margin-left: 2em;
+    }
     .header-section {
         display: flex;
     }
@@ -678,7 +719,7 @@ header article a {
 
     section.header-section article span {
         width: 65%;
-        margin-left: 0.5em;
+        margin-left: 4em;
     }
 
     .header-section article input {
@@ -785,7 +826,6 @@ header article a {
         width: 30%;
         margin-bottom: 1em;
     }
-
     .features header {
         margin-left: 3em;
     }
@@ -829,6 +869,7 @@ header article a {
 
     .features-articles {
         display: flex;
+        flex-direction: row;
     }
 
     .payment-billing {
@@ -865,7 +906,7 @@ header article a {
         color: #b0b1b3;
     }
 
-    .payment {
+    div.payment {
         width: 20%;
     }
 
@@ -920,8 +961,8 @@ header article a {
         color: #616368;
     }
 
-    .arrow-btn {
-        margin-top: 40%;
+    ul.arrow-btn {
+        margin-top: 45%;
         font-size: 13px;
         background: #fff;
     }
@@ -1030,6 +1071,18 @@ header article a {
         width: 80%;
         color: #abadb1;
         margin-left: 2em;
+    }
+    div.payment{
+        width: 70%;
+    }
+    section.header-section article a {
+        margin-left: 1em;
+    }
+    ul.arrow-btn{
+        margin-top: 90%;
+    }
+    ul.social{
+        margin-left: -3em;
     }
 }
 @media(width: 1024px) {
@@ -1297,8 +1350,8 @@ header article a {
         color: #616368;
     }
 
-    .arrow-btn {
-        margin-top: 50%;
+    ul.arrow-btn {
+        margin-top: 55%;
         font-size: 13px;
         background: #fff;
     }
@@ -1474,5 +1527,41 @@ header article a {
     }
     .download-section p{
         color: #abadb1;
+    }
+}
+@media(min-width: 1920px) {
+    section.header-section img{
+        width: 20%;
+        height: 20%;
+        margin-left: -4em;
+    }
+    ul.arrow-btn{
+        margin-top: 30%;
+    }
+    .left-side header, .right-side header{
+        padding: 5em;
+    }
+    .customer-section article h1 {
+        width: 70%;
+    }
+    .questions header p{
+        width: 40%;
+    }
+    .trial {
+        margin-left: 2em;
+    }
+    .download-section{
+        margin-top: 10%;
+        position: relative;
+    }
+    .download-section p{
+        width: 60%;
+    }
+    .download-bg{
+        position: absolute;
+        top: -73%;
+    }
+    div.payment{
+        width: 25%;
     }
 }
