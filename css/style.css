@@ -444,32 +444,109 @@ header article a {
 }
 
 @media (min-width: 768px) {
-    .header {
+    .header{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         margin-bottom: 2em;
     }
-
-    .header nav ul {
+    .site-header nav ul {
         display: flex;
-        flex-direction: row;
-        margin-right: 3em;
+        flex-direction: column;
+    }
+    section.header-section article span{
+        width: 45%;
+        margin: 0 auto;
+    }
+    .site-header img{
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .header-section article h1{
+        font-weight: 600;
+        color: #242f51;
+        width: 75%;
+        margin: 1em auto;
+    }
+    .header-section article p{
+        width: 70%;
+        margin: 0 auto;
+    }
+    section.header-section article input{
+        margin-top: 1.5em;
+        margin-left: 5em;
+    }
+    section.header-section article a {
+        margin-left: 1em;
+    }
+    .header-section article a{
+        margin-left: 1em;
+    }
+    .features-articles{
+        display: flex;
+        flex-direction: column;
+    }
+    .payment{
+        width: 30%;
+    }
+    .left-side, .right-side {
+        padding: 0;
     }
 
-    .header nav ul li {
-        margin-left: 2em
+    .left-side header, .right-side header {
+        background: linear-gradient(#ffff, #f5f8fa);
+        padding-bottom: 1em;
     }
 
-    .arrow-btn ul {
-        margin-top: 35%;
+    .left-side h1, .right-side h1 {
+        margin: 0;
+        font-weight: 600;
+    }
+    .right-side a {
+        margin-bottom: 1em;
+    }
+    .trial-btn{
+        margin-bottom: 1em;
+    }
+    .left-side h3, .right-side h3{
+        font-weight: 500;
+    }
+    .customer-section img{
+        margin: 2em auto;
+    }
+    ul.arrow-btn{
+        margin-top: 38%;
+    }
+    .questions-article h2 {
+        margin-left: 2em;
+        color: #242f51;
     }
 
-    .payment {
-        width: 35%;
+    .questions-article p {
+        width: 90%;
+        color: #abadb1;
     }
 
-    .trial {
-        margin-left: 0.5em;
+    .questions-header {
+        width: 95%;
+        margin-left: 5%;
+        background: #f5f7fa;
+        padding: 1em;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+    section.questions header h1{
+        margin-left: 1.5em;
+    }
+    .download-section h1{
+        font-weight: 600;
+        color:#242f51;
+    }
+    .download-section p{
+        color: #abadb1;
     }
 }
 
@@ -1391,5 +1468,11 @@ header article a {
     .questions header h1{
         margin-left: 1.5em;
     }
-
+    .download-section h1{
+        font-weight: 600;
+        color:#242f51;
+    }
+    .download-section p{
+        color: #abadb1;
+    }
 }
