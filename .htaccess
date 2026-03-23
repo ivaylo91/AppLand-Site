@@ -1,0 +1,73 @@
+# Enable gzip compression for better performance across all browsers
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Enable browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/html "access plus 1 day"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+</IfModule>
+
+# Set proper cache control headers
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|svg)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=86400, must-revalidate"
+    </FilesMatch>
+    # Add charset to text files for better browser interpretation
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Content-Type "text/html; charset=UTF-8"
+    </FilesMatch>
+    <FilesMatch "\.css$">
+        Header set Content-Type "text/css; charset=UTF-8"
+    </FilesMatch>
+    <FilesMatch "\.js$">
+        Header set Content-Type "application/javascript; charset=UTF-8"
+    </FilesMatch>
+</IfModule>
+
+# Prevent access to sensitive files
+<FilesMatch "^\.(htaccess|htpasswd|env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Enable URL rewriting for clean URLs
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Remove .html extension
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)\.html$ $1 [L,R=301]
+    
+    # Rewrite URLs without extensions
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# Force HTTPS and www
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Redirect from non-www to www
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>

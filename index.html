@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#2500f9">
+    <meta name="msapplication-TileColor" content="#2500f9">
     <title>App Lab</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/v4-shims.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/v4-shims.min.css"></noscript>
 
 </head>
 <body>
 <header class="site-header">
     <div class="header">
         <a href="#" class="logo"><span class="f-letters">App</span><span class="s-letters">Lab</span></a>
-        <a href="#" id="nav-bar" onclick="myFunc()"><i class="fa fa-bars "></i></a>
+        <button id="nav-bar" aria-label="Toggle navigation menu" onclick="myFunc(event)"><i class="fa fa-bars"></i></button>
         <nav id="site-navigation">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -23,17 +27,16 @@
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Testimonial</a></li>
                 <li><a href="#">FAQ</a></li>
-                <li><input type="submit" class="try-btn" value="Try it free"></li>
+                <li><button class="try-btn">Try it free</button></li>
             </ul>
         </nav>
     </div>
     <section class="header-section">
         <article>
-            <span>#1 Editors Choice App of 2020</span>
+            <span>#1 Editor's Choice App of 2020</span>
             <h1>Best App for your modern lifestyle</h1>
-            <p>Increase productivity with a simple to-do app. app for
-                managing your personal budgets.</p>
-            <input type="submit" class="try-btn" value="Try it free">
+            <p>Increase productivity with a simple to-do app for managing your personal budgets.</p>
+            <button class="try-btn">Try it free</button>
             <a href="#">Watch demo video</a>
         </article>
         <img src="img/phone.png" alt="phone">
@@ -43,15 +46,15 @@
     <section class="companies">
         <h4>Trusted by companies like</h4>
         <ul>
-            <li><img src="img/trusted-company-1.svg" alt="trusted-company"></li>
-            <li><img src="img/trusted-company-2.svg" alt="trusted-company"></li>
-            <li><img src="img/trusted-company-3.svg" alt="trusted-company"></li>
-            <li><img src="img/trusted-company-4.svg" alt="trusted-company"></li>
-            <li><img src="img/trusted-company-5.svg" alt="trusted-company"></li>
+            <li><img src="img/trusted-company-1.svg" alt="trusted-company" loading="lazy"></li>
+            <li><img src="img/trusted-company-2.svg" alt="trusted-company" loading="lazy"></li>
+            <li><img src="img/trusted-company-3.svg" alt="trusted-company" loading="lazy"></li>
+            <li><img src="img/trusted-company-4.svg" alt="trusted-company" loading="lazy"></li>
+            <li><img src="img/trusted-company-5.svg" alt="trusted-company" loading="lazy"></li>
         </ul>
     </section>
     <section class="apps-section">
-        <img src="img/phone-img.png" alt="phone" class="phone-img">
+        <img src="img/phone-img.png" alt="phone" class="phone-img" loading="lazy">
         <div class="apps-articles">
             <article>
                 <h1>Awesome apps features</h1>
@@ -60,7 +63,7 @@
             </article>
             <article class="speed">
                 <header>
-                    <img src="img/speed.svg" alt="speed">
+                    <img src="img/speed.svg" alt="speed" loading="lazy">
                     <h2>Fast Performance</h2>
                 </header>
                 <p>
@@ -72,7 +75,7 @@
             </article>
             <article class="prototype">
                 <header>
-                    <img src="img/prototype.svg" alt="prototype">
+                    <img src="img/prototype.svg" alt="prototype" loading="lazy">
                     <h2>Prototyping</h2>
                 </header>
                 <p>
@@ -83,7 +86,7 @@
             </article>
             <article class="vector">
                 <header>
-                    <img src="img/vector.svg" alt="prototype">
+                    <img src="img/vector.svg" alt="vector" loading="lazy">
                     <h2>Vector Editing</h2>
                 </header>
                 <p>
@@ -100,14 +103,13 @@
                 you may love this
                 anytime & anywhere</h1>
             <p>The rise of mobile devices transforms the way we
-                consume information entirely and the world's most
-                elevant channels such as Facebook</p>
+                consume information entirely and the world's most relevant channels such as Facebook</p>
         </article>
     </section>
     <section class="performance">
         <article class="automatic">
             <header>
-                <img src="img/automatic.svg" alt="automatic">
+                <img src="img/automatic.svg" alt="automatic" loading="lazy">
                 <h2>Automatic Payout</h2>
             </header>
             <p>
@@ -119,7 +121,7 @@
         </article>
         <article class="network">
             <header>
-                <img src="img/network.svg" alt="network">
+                    <img src="img/network.svg" alt="network" loading="lazy">
                 <h2>Network Effect</h2>
             </header>
             <p>
@@ -130,7 +132,7 @@
         </article>
         <article class="bigger">
             <header>
-                <img src="img/bigger.svg" alt="bigger">
+                    <img src="img/bigger.svg" alt="bigger" loading="lazy">
                 <h2>Bigger Reward Method</h2>
             </header>
             <p>
@@ -141,62 +143,60 @@
         </article>
     </section>
     <section class="design">
-        <img src="img/design-pic.png" alt="design-pic" class="design-img">
+        <img src="img/design-pic.png" alt="design-pic" class="design-img" loading="lazy">
         <article>
             <h2>Designed & built by
                 the latest code
                 integration</h2>
-            <p>The rise of mobile devices transforms the way we
-                consume information entirely and the world's most
-                elevant channels such as Facebook.</p>
-            <input type="submit" class="learn-btn" value="learn more">
+            <p>The rise of mobile devices transforms the way we consume information entirely and the world's most relevant channels such as Facebook.</p>
+            <button class="learn-btn">Learn more</button>
         </article>
     </section>
-    <section>
+    <section class="choose-app-section">
         <article class="choose-app">
             <h1>Why you should choose our app</h1>
             <p>The rise of mobile devices transforms the way we consume information entirely
-                and the world's most elevant channels such as Facebook.</p>
+                and the world's most relevant channels such as Facebook.</p>
         </article>
     </section>
     <section class="testimonials">
         <article>
-            <img src="img/app.png" alt="app-pic">
+            <img src="img/app.png" alt="app-pic" loading="lazy">
             <h2>App Development</h2>
             <p>Get your blood tests delivered at
                 home collect a sample from the
                 news your blood tests.</p>
         </article>
         <article>
-            <img src="img/trophy.png" alt="trophy">
+            <img src="img/trophy.png" alt="trophy" loading="lazy">
             <h2>10 Times Award</h2>
             <p>Get your blood tests delivered at
                 home collect a sample from the
                 news your blood tests.</p>
         </article>
         <article>
-            <img src="img/computer.png" alt="computer">
+            <img src="img/computer.png" alt="computer" loading="lazy">
             <h2>Cloud Storage</h2>
             <p>Get your blood tests delivered at
                 home collect a sample from the
                 news your blood tests.</p>
         </article>
         <article>
-            <img src="img/cloud.png" alt="cloud">
+            <img src="img/cloud.png" alt="cloud" loading="lazy">
             <h2>Customization</h2>
             <p>Get your blood tests delivered at
                 home collect a sample from the
                 news your blood tests.</p>
         </article>
         <article>
-            <img src="img/ui.png" alt="ui">
+            <img src="img/ui.png" alt="ui" loading="lazy">
             <h2>UX Planning</h2>
             <p>Get your blood tests delivered at
                 home collect a sample from the
                 news your blood tests.</p>
         </article>
         <article>
-            <img src="img/customer.png" alt="customer">
+            <img src="img/customer.png" alt="customer" loading="lazy">
             <h2>Customer Support</h2>
             <p>Get your blood tests delivered at
                 home collect a sample from the
@@ -212,7 +212,7 @@
         <div class="features-articles">
             <div class="features-main">
                 <article>
-                    <img src="img/app.png" alt="app-pic">
+                    <img src="img/app.png" alt="app-pic" loading="lazy">
                     <h2>App Development</h2>
                     <p>Get your blood tests delivered at
                         home collect a sample from the
@@ -253,9 +253,9 @@
                         home collect a sample from the
                         news your blood tests.</p>
                 </article>
-                <input type="submit" value="see all" class="see-all">
+                <button class="see-all">See all</button>
             </div>
-            <img src="img/phones.png" alt="phones" class="phones">
+                <img src="img/phones.png" alt="phones" class="phones" loading="lazy">
         </div>
     </section>
     <section class="billing-section">
@@ -263,7 +263,7 @@
             <h2>Get awesome features, without
                 extra charges</h2>
             <p>The rise of mobile devices transforms the way we consume information entirely
-                and the world's most elevant channels such as Facebook.</p>
+                and the world's most relevant channels such as Facebook.</p>
         </header>
         <article>
             <div class="payment">
@@ -284,7 +284,7 @@
                     <li>Blog Support Tools</li>
                     <li>eCommerce Store</li>
                 </ul>
-                <input type="submit" class="trial-btn" value="Start free trail">
+                <button class="trial-btn">Start free trial</button>
             </div>
             <div class="right-side">
                 <header>
@@ -298,18 +298,17 @@
                     <li>Blog Support Tools</li>
                     <li>eCommerce Store</li>
                 </ul>
-                <input type="submit" class="trial-btn subscribe" value="Subscribe now">
-                <a href="#" class="trial">Or start 14 days trail</a>
+                <button class="trial-btn subscribe">Subscribe now</button>
+                <a href="#" class="trial">Or start 14 days trial</a>
             </div>
         </article>
     </section>
     <section class="customer-section">
-        <img src="img/testimonial.png" alt="customer">
+        <img src="img/testimonial.png" alt="customer" loading="lazy">
         <article>
             <h1>Meet Client Satisfaction
                 by using product</h1>
-            <p>The rise of mobile devices transforms the way we consume.
-                elevant channels such as Facebook.</p>
+            <p>The rise of mobile devices transforms the way we consume information entirely and the world's most relevant channels such as Facebook.</p>
             <ul class="stars">
                 <li><i class="fa fa-star"></i></li>
                 <li><i class="fa fa-star"></i></li>
@@ -324,7 +323,7 @@
                 offshoring.</p>
             <div class="ceo-section">
                 <ul class="ceo">
-                    <li><img src="img/ceo-pic.png" alt="ceo"></li>
+                    <li><img src="img/ceo-pic.png" alt="ceo" loading="lazy"></li>
                     <li><span>Zoltan Nemeth</span></li>
                     <li><span class="position">CEO of Pixler Lab</span></li>
                 </ul>
@@ -339,7 +338,7 @@
         <header>
             <h1>Frequently asked questions</h1>
             <p>The rise of mobile devices transforms the way we consume information entirely
-                and the world's most elevant channels such as Facebook</p>
+                and the world's most relevant channels such as Facebook</p>
         </header>
         <article class="questions-article">
             <div class="questions-header">
@@ -351,8 +350,8 @@
             </div>
             <ul class="question-section">
                 <li>App installation failed, how to update system information?</li>
-                <li>Website reponse taking time, how to improve?</li>
-                <li>New update fixed all bug and issues</li>
+                <li>Website response taking time, how to improve?</li>
+                <li>New update fixed all bugs and issues</li>
                 <li>How to contact with riders emergency?</li>
             </ul>
         </article>
@@ -360,12 +359,12 @@
     <section class="download-section">
         <h1>Download our App now</h1>
         <p>The rise of mobile devices transforms the way we consume information entirely
-            and the world's most elevant channels such as Facebook.</p>
+            and the world's most relevant channels such as Facebook.</p>
         <ul class="download-stores">
-            <li><a href="#"><img src="img/google-play.png" alt="google"></a></li>
-            <li><a href="#"><img src="img/app-store.png" alt="app-store"></a></li>
-        </ul>
-        <img src="img/download-section.png" alt="download-bg" class="download-bg">
+            <li><a href="#"><img src="img/google-play.png" alt="google" loading="lazy"></a></li>
+                <li><a href="#"><img src="img/app-store.png" alt="app-store" loading="lazy"></a></li>
+            </ul>
+            <img src="img/download-section.png" alt="download-bg" class="download-bg" loading="lazy">
     </section>
 </main>
 <footer class="site-footer">
@@ -382,13 +381,14 @@
         </ul>
     </nav>
     <ul class="social">
-        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-        <li><a href=""><i class="fab fa-slack-hash"></i></a></li>
-        <li><a href=""><i class="fab fa-github"></i></a></li>
+        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://slack.com" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+        <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
     </ul>
-    <p>Copyright&copy;Arifur Rahman Tushar 2019.All rights reserved.</p>
+    <p>Copyright &copy; Arifur Rahman Tushar 2019. All rights reserved.</p>
 </footer>
-<script src="js/navbar.js"></script>
+<script src="js/compatibility.js" defer></script>
+<script src="js/navbar.js" defer></script>
 </body>
 </html>

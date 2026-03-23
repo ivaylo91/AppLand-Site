@@ -1,4 +1,6 @@
 *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -8,57 +10,276 @@ html, body {
 }
 
 body {
-    font: 16px/1.5 "Poppins", sans-serif;
+    font: 14px/1.5 "Poppins", sans-serif;
+    overflow-x: hidden;
 }
-#nav-bar{
+
+#nav-bar {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
     display: flex;
-    justify-content: right;
-    margin-right: 2em;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    justify-content: flex-end;
+    margin-right: 1em;
     text-decoration: none;
-    font-size: 2em;
-    margin-bottom: 2em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #000;
+    padding: 0.5em;
+    border-radius: 4px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    position: relative;
 }
-#site-navigation{
+
+#nav-bar:hover {
+    color: #2500f9;
+    background: rgba(37, 0, 249, 0.08);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#nav-bar:active {
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+#site-navigation {
     display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #eee;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
+    -moz-transition: opacity 0.3s ease, visibility 0.3s ease, -moz-transform 0.3s ease;
+    -ms-transition: opacity 0.3s ease, visibility 0.3s ease, -ms-transform 0.3s ease;
+    -o-transition: opacity 0.3s ease, visibility 0.3s ease, -o-transform 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+#site-navigation.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#site-navigation ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+    padding: 1em 0;
+}
+
+#site-navigation li {
+    list-style: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#site-navigation a {
+    display: block;
+    padding: 1em 1.5em;
+    color: #242f51;
+    text-decoration: none;
+    -webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -ms-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+    transition: background 0.2s ease;
+}
+
+#site-navigation a:hover {
+    background: #f5f7fa;
+    color: #2500f9;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    #nav-bar {
+        display: none;
+    }
+
+    #site-navigation {
+        display: flex !important;
+        position: static;
+        background: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #site-navigation ul {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: -o-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        gap: 2em;
+        margin: 0;
+        padding: 0;
+    }
+
+    #site-navigation li {
+        list-style: none;
+    }
 }
 .site-header {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     background: url("../img/bg-header.jpg") no-repeat;
     background-size: cover;
+    padding: 1em;
+}
+
+.header {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em 0;
 }
 
 .site-header nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: -3em;
+    margin: 0;
+    padding: 1em;
+    gap: 0.5em;
 }
 
 .site-header nav ul li {
     list-style: none;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .site-header nav li a {
     text-decoration: none;
     color: #000;
+    display: block;
+    padding: 0.5em;
 }
 
 .site-header nav li a:hover {
-    color: #c0c0c0;
+    color: #2500f9;
     cursor: pointer;
 }
 
 .site-header img {
-    width: 60%;
-    height: 60%;
-    margin-left: 4em;
-
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 1em auto;
 }
 
-input[type=submit]:hover {
-    background: #add8e6;
+input[type=submit],
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+input[type=submit]:hover,
+button:hover {
+    background: #1a0fb5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 0, 249, 0.3);
+}
+
+input[type=submit]:active,
+button:active {
+    transform: translateY(-1px);
+}
+
+input[type=submit]:focus,
+button:focus,
+a:focus {
+    outline: 2px solid #2500f9;
+    outline-offset: 2px;
+}
+
+input[type=submit]:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #2500f9;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(37, 0, 249, 0.1);
+}
+
+.see-all {
+    border: none;
+    background: #2500f9;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 1em 0;
+    font-weight: 500;
 }
 
 .logo {
@@ -66,6 +287,9 @@ input[type=submit]:hover {
     font-weight: bold;
     font-size: 1.375em;
     padding: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
 }
 
 .f-letters {
@@ -87,13 +311,15 @@ input[type=submit]:hover {
 .header-section article span {
     background: #e2eaed;
     border-radius: 20px;
-    padding: 0.1em;
+    padding: 0.5em 1em;
     position: relative;
     display: block;
     text-align: center;
     color: #242f51;
-    width: 75%;
-    margin: auto;
+    width: 90%;
+    max-width: 250px;
+    margin: 1em auto;
+    font-size: 0.85em;
 }
 
 .header-section article span:before {
@@ -104,168 +330,325 @@ input[type=submit]:hover {
     background: #fcae61;
     padding: 0.3em;
     border-radius: 20px;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .header-section article {
-    margin: auto;
-    width: 75%;
+    margin: 1em auto;
+    width: 95%;
+    max-width: 600px;
+    text-align: center;
+    padding: 0 1em;
+}
+
+.header-section article h1 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: #242f51;
+    font-weight: 600;
+}
+
+.header-section article p {
+    font-size: 0.95em;
+    color: #424242;
+    margin: 0.5em 0;
 }
 
 section.header-section article input {
-    margin-left: 0.5em;
+    margin: 1em 0.5em 0.5em 0;
+    padding: 0.6em 1.2em;
+    font-size: 0.95em;
 }
 
 section.header-section article a {
-    margin-left: 1.3em;
+    margin-left: 0.5em;
     text-decoration: none;
+    color: #2500f9;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.6em 0;
 }
 
 .companies h4 {
     text-align: center;
     font-weight: 300;
+    padding: 1em;
+    font-size: 0.95em;
 }
 
 .companies ul {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 1em;
 }
 
 .companies ul li {
     list-style: none;
-    margin-bottom: 1em;
+    margin: 0;
+    flex: 1;
+    min-width: 100px;
+    max-width: calc(50% - 0.5em);
+}
+
+.companies ul li img {
+    width: 100%;
+    height: auto;
 }
 
 .apps-section {
     display: flex;
     flex-direction: column;
-    max-width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
 }
 
 .apps-section img.phone-img {
-    width: 70%;
-    height: 70%;
-    margin: auto;
+    width: 100%;
+    height: auto;
+    margin: 1em auto;
+}
+
+.apps-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.apps-articles article:first-child h1 {
+    font-size: 1.5em;
+    color: #242f51;
+}
+
+.apps-articles article {
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.apps-articles article h2 {
+    font-size: 1.1em;
+    color: #242f51;
+    margin: 0.5em 0;
 }
 
 .smart-section {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
 }
 
 .performance {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: 1em auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+    gap: 1.5em;
+}
+
+.performance article {
+    padding: 1.5em;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.performance article h2 {
+    font-size: 1.1em;
+    color: #242f51;
+    margin-top: 0;
 }
 
 .design {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
 }
 
 .design-img {
-    width: 75%;
-    height: 75%;
-    margin-left: 4em;
+    width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
+
+.design article h2 {
+    font-size: 1.3em;
+    color: #242f51;
+    margin-top: 0;
 }
 
 .learn-btn {
     background: #2500f9;
     color: #fff;
-    padding: 0.75em;
-    width: 40%;
+    padding: 0.75em 1.5em;
+    width: 100%;
+    max-width: 200px;
     border: none;
     border-radius: 20px;
     font-weight: 600;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.try-btn {
+    background: #2500f9;
+    border-radius: 20px;
+    padding: 0.6em 1.2em;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 500;
 }
 
 .choose-app {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.choose-app h1 {
+    font-size: 1.5em;
+    color: #242f51;
+}
+
+.choose-app-section {
+    width: 100%;
 }
 
 .testimonials {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+    gap: 1.5em;
+}
+
+.testimonials article {
+    padding: 1.5em;
+    background: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.testimonials article img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin: 0 auto;
 }
 
 .billing-section {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.billing-section header h2 {
+    font-size: 1.5em;
+    color: #242f51;
+    text-align: center;
 }
 
 .features {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.features header h2 {
+    font-size: 1.5em;
+    color: #242f51;
+    text-align: center;
 }
 
 .features-main {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 100%;
+    margin: 0;
+    gap: 1.5em;
 }
+
+.features-main article {
+    padding: 1.5em;
+    background: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.features-main article img {
+    width: 80px;
+    height: auto;
+    margin: 0 auto 0.5em;
+}
+
 .features-articles {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: -3em;
-}
-.see-all {
-    border: none;
-    background: #2500f9;
-    color: #fff;
-    padding: 0.75em;
-    border-radius: 20px;
+    margin: 0;
+    gap: 1.5em;
 }
 
 .phones {
-    width: 75%;
-    height: 75%;
-    margin: 3em auto;
+    width: 100%;
+    height: auto;
+    margin: 2em auto;
 }
 
 div.payment {
     border: 1px solid #eee;
-    width: 55%;
+    width: 90%;
+    max-width: 300px;
     text-align: center;
-    padding: 0.5em;
-    margin: auto;
+    padding: 1em;
+    margin: 2em auto;
     border-radius: 20px;
     position: relative;
 }
 
 .payment a {
     text-decoration: none;
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-weight: 500;
 }
 
 .monthly {
     background: #2500f9;
     color: #fff;
-    padding: 0.6em;
+    padding: 0.5em 1em;
     border-radius: 20px;
-    position: absolute;
-    left: -0.1em;
-    bottom: -0.1em;
+    margin-right: 0.5em;
 }
 
 .annual {
-    margin-left: 40%;
+    color: #242f51;
 }
 
 .left-side, .right-side {
@@ -273,28 +656,59 @@ div.payment {
     text-align: center;
     width: 100%;
     border-radius: 15px;
-    margin-left: 0.5em;
-    margin-top: 2em;
-    padding: 2em;
+    margin: 1em 0;
+    padding: 2em 1em;
+    background: #fff;
 }
-.left-side header, .right-side header{
+
+.left-side header, .right-side header {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffff), to(#f5f8fa));
+    background: -webkit-linear-gradient(#ffff, #f5f8fa);
+    background: -moz-linear-gradient(#ffff, #f5f8fa);
+    background: -ms-linear-gradient(#ffff, #f5f8fa);
+    background: -o-linear-gradient(#ffff, #f5f8fa);
     background: linear-gradient(#ffff, #f5f8fa);
-    padding-bottom: 1em;
+    padding: 1em 0;
+    border-radius: 10px;
+    margin: -1em -1em 1em -1em;
+    padding: 1em;
 }
-.left-side,.right-side{
-    padding: 0;
+
+.left-side h1, .right-side h1 {
+    margin: 0.5em 0 0 0;
+    font-weight: 600;
+    font-size: 1.75em;
 }
+
+.left-side h3, .right-side h3 {
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #242f51;
+    margin: 0.5em 0;
+}
+
 .left-side span, .right-side span {
     font-weight: normal;
     font-size: 0.6em;
     color: #616368;
 }
 
+.payment-billing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
+
 .payment-billing li {
     list-style: none;
-    margin-bottom: 2em;
-    margin-right: 2em;
+    margin-bottom: 1em;
     color: #616368;
+}
+
+.payment-billing ul {
+    text-align: left;
+    padding: 0 1em;
 }
 
 .trial-btn {
@@ -302,45 +716,83 @@ div.payment {
     color: #fff;
     border-radius: 20px;
     border: none;
-    padding: 0.5em;
-    margin-bottom: 1em;
+    padding: 0.7em 1.5em;
+    margin: 1em 0;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    font-weight: 500;
 }
 
-.customer-section img {
-    width: 75%;
-    height: 75%;
-    margin-top: 2em;
-    margin-left: 4em;
-    margin-bottom: 1em;
+.trial-btn.subscribe {
+    margin-bottom: 0.5em;
+}
+
+.right-side a.trial {
+    display: block;
+    color: #2500f9;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 0.5em;
 }
 
 .customer-section {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.customer-section img {
+    width: 100%;
+    height: auto;
+    margin: 1em 0;
+    border-radius: 10px;
+}
+
+.customer-section article h1 {
+    font-size: 1.3em;
+    color: #242f51;
+}
+
+.customer-section article p {
+    color: #616368;
+    line-height: 1.6;
 }
 
 .stars {
     display: flex;
+    justify-content: center;
+    gap: 0.3em;
 }
 
 .stars li {
     list-style: none;
-    margin-left: 0.5em;
-}
-
-.fa.fa-star {
-    color: #ffcc00;
 }
 
 .ceo-section {
     display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.ceo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .ceo img {
-    width: 55%;
-    height: 55%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .ceo li {
@@ -348,89 +800,159 @@ div.payment {
     text-align: center;
 }
 
+.ceo li:nth-child(2) {
+    font-weight: 600;
+    color: #242f51;
+    margin-top: 0.5em;
+}
+
+.ceo li.position {
+    font-size: 0.85em;
+    color: #616368;
+}
+
 ul.arrow-btn {
     display: flex;
-    margin-top: 60%;
+    justify-content: center;
+    gap: 1em;
 }
 
 .fa.fa-arrow-circle-left, .fa-arrow-circle-right {
-    font-size: 1.875em;
+    font-size: 1.5em;
     color: #c0c0c0;
+    cursor: pointer;
 }
 
 .arrow-btn li {
     list-style: none;
-    margin-left: 1em;
 }
 
 .questions {
-    width: 75%;
+    width: 95%;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 2em auto;
+    padding: 1em;
 }
+
 section.questions h1 {
     font-weight: 600;
+    font-size: 1.5em;
+    color: #242f51;
+    text-align: center;
 }
+
 section.questions p {
-    margin-left: 2em;
+    text-align: center;
+    color: #616368;
+    margin: 0.5em 0;
 }
+
 .questions-header {
     background: #f5f7fa;
-    margin-left: 2em;
-    padding: 0.5em;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 1.5em;
 }
+
+.questions-header h2 {
+    margin: 0;
+    color: #242f51;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.questions-header p {
+    text-align: left;
+    margin: 0.5em 0 0 0;
+    font-size: 0.9em;
+}
+
 .questions article li {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     background: #f5f7fa;
     padding: 1em;
     width: 100%;
     list-style: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+.questions article li:hover {
+    background: #eff0f5;
+}
+
 .questions article li:after {
     content: url("../img/plus.png");
     float: right;
-    margin-top: auto;
 }
+
 .download-section {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+    text-align: center;
     font-weight: 600;
-}
-.download-section h1{
-    font-weight: 600;
-}
-.download-section p {
-    font-weight: 500;
-    color:#abadb1;
-}
-.download-stores {
-    display: flex;
-    justify-content: center;
 }
 
-.download-stores img {
-    width: 90%;
-    height: 90%;
+.download-section h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #242f51;
+    margin-bottom: 0.5em;
+}
+
+.download-section p {
+    font-weight: 500;
+    color: #abadb1;
+    margin-bottom: 1.5em;
+}
+
+.download-stores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
 }
 
 .download-stores li {
     list-style: none;
 }
 
+.download-stores a {
+    display: block;
+}
+
+.download-stores img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
 .download-bg {
-    width: 90%;
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
 }
 
 .site-footer {
     background: #09142e;
-    padding: 2em;
+    padding: 2em 1em;
 }
 
 .site-footer header {
     text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.site-footer .logo {
+    font-size: 1.25em;
 }
 
 .site-footer span.s-letters {
@@ -440,37 +962,43 @@ section.questions p {
 .site-footer nav ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 1em;
 }
 
 .site-footer nav li {
     list-style: none;
-    margin-left: 1em;
+    margin: 0;
 }
 
 .site-footer nav li a {
     text-decoration: none;
     color: #fff;
+    font-size: 0.9em;
 }
 
 .site-footer nav li a:hover {
-    color: #616368;
+    color: #fcae61;
 }
 
 ul.social {
     display: flex;
     justify-content: center;
-    margin-left: -5em;
+    margin: 1.5em 0;
+    gap: 1em;
 }
 
 .social li {
     list-style: none;
-    margin-left: 1em;
-    margin-top: 1em;
+    margin: 0;
 }
 
 .social li a {
-    color: #273043;
-    font-size: 1.375em;
+    color: #fcae61;
+    font-size: 1.25em;
+    display: block;
 }
 
 .social li a:hover {
@@ -479,424 +1007,438 @@ ul.social {
 
 .site-footer p {
     text-align: center;
-    color: #273043;
+    color: #616368;
+    font-size: 0.85em;
 }
 
+/* Tablet Styles (768px and up) */
 @media (min-width: 768px) {
-    .header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 2em;
-    }
-    #nav-bar{
-        display: flex;
-        justify-content: right;
-        margin-right: 2em;
-        text-decoration: none;
-        font-size: 2em;
-    }
-    #site-navigation{
-        display: none;
-    }
-    .site-header nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-    section.header-section article span{
-        width: 45%;
-        margin: 0 auto;
-    }
-    .site-header img{
-        width: 50%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
-    .header-section article h1{
-        font-weight: 600;
-        color: #242f51;
-        width: 75%;
-        margin: 1em auto;
-    }
-    .header-section article p{
-        width: 70%;
-        margin: 0 auto;
-    }
-    section.header-section article input{
-        margin-top: 1.5em;
-        margin-left: 5em;
-    }
-    section.header-section article a {
-        margin-left: 1em;
-    }
-    .header-section article a{
-        margin-left: 1em;
-    }
-    .features-articles{
-        display: flex;
-        flex-direction: column;
-    }
-    .payment{
-        width: 30%;
-    }
-    .left-side, .right-side {
-        padding: 0;
+    #site-navigation li {
+        list-style: none;
     }
 
-    .left-side header, .right-side header {
-        background: linear-gradient(#ffff, #f5f8fa);
-        padding-bottom: 1em;
+    .site-header {
+        padding: 2em;
     }
 
-    .left-side h1, .right-side h1 {
-        margin: 0;
-        font-weight: 600;
-    }
-    .right-side a {
-        margin-bottom: 1em;
-    }
-    .trial-btn{
-        margin-bottom: 1em;
-    }
-    .left-side h3, .right-side h3{
-        font-weight: 500;
-    }
-    .customer-section img{
-        margin: 2em auto;
-    }
-    ul.arrow-btn{
-        margin-top: 38%;
-    }
-    .questions-article h2 {
-        margin-left: 2em;
-        color: #242f51;
+    .header {
+        justify-content: space-between;
+        padding: 1em 0;
     }
 
-    .questions-article p {
-        width: 90%;
-        color: #abadb1;
-    }
-
-    .questions-header {
-        width: 95%;
-        margin-left: 5%;
-        background: #f5f7fa;
-        padding: 1em;
-        margin-bottom: 2em;
-        margin-top: 2em;
-    }
-    section.questions header h1{
-        margin-left: 1.5em;
-    }
-    .download-section h1{
-        font-weight: 600;
-        color:#242f51;
-    }
-    .download-section p{
-        color: #abadb1;
-    }
-}
-
-@media (min-width: 380px) {
-    section.header-section article span {
-        width: 103%;
-    }
-
-    .payment {
-        width: 60%;
-    }
-
-    .trial {
-        display: block;
-        margin-top: 1em;
-    }
-
-    .site-footer nav ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin-right: 2.5em;
-    }
-
-    .site-footer nav li {
-        margin-bottom: 1em;
-    }
-
-    .questions-section ul {
-        width: 96%;
-    }
-}
-
-@media (min-width: 320px) {
-    .site-footer nav ul {
-        display: block;
-        text-align: center;
-        margin-left: -2em;
-    }
-
-    .site-footer nav li {
-        margin-top: 1em;
-    }
-
-    .trial {
-        display: block;
-        margin-top: 1em;
-    }
-
-    .header-section article span {
-        width: 125%;
-        margin-left: -1.75em;
-    }
-
-    .header-section article input {
-        margin-left: -1em;
-    }
-
-    .header-section article a {
-        margin-left: 0;
-    }
-
-    .learn-btn {
-        width: 50%;
-    }
-
-    .payment {
-        width: 80%;
-    }
-
-    .customer-section img {
-        width: 92%;
-        height: 92%;
-        margin-left: -1em;
-    }
-
-    .arrow-btn {
-        margin-top: 80%;
-    }
-
-    .questions {
-        margin-left: -1em;
-        width: 95%;
-    }
-
-    .questions article li:after {
-        margin-top: 0.75em;
-    }
-
-    .questions header h1 {
-        margin-left: 1em;
-    }
-
-    .questions p {
-        margin-left: 3em;
-    }
-
-    .questions-article h2 {
-        margin-left: 1.5em;
-    }
-
-    .download-stores img {
-        margin-left: -1.5em;
-    }
-
-    .design-img {
-        margin-left: -0.5em;
-    }
-
-    .companies {
-        margin-left: -2em;
-    }
-}
-
-@media (min-width: 1280px) {
-    #nav-bar {
-        display: none;
-    }
-    #site-navigation{
-        display: flex;
-    }
-  .header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  }
-    .header nav ul {
-        display: flex;
-        flex-direction: row;
-        margin-right: 3em;
-    }
-    .header nav ul li{
-        margin-left: 2em;
-    }
     .header-section {
         display: flex;
-    }
-
-    .header-section img {
-        width: 40%;
-        height: 40%;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 2em;
     }
 
     .header-section article {
-        width: 40%;
+        width: 50%;
+        text-align: left;
+        margin: 0;
     }
 
-    section.header-section article span {
-        width: 65%;
-        margin-left: 4em;
+    .header-section article span {
+        width: 60%;
+        margin: 0;
     }
 
-    .header-section article input {
-        margin-left: 0.75em;
+    .header-section article h1 {
+        font-size: 2em;
     }
 
-    .header-section article a {
-        margin-left: 1em;
-    }
-
-    .companies {
-        margin-top: 3em;
-    }
-
-    .companies ul {
-        display: flex;
-        margin-top: 3em;
-        margin-left: 2em;
-        justify-content: center;
+    .site-header img {
+        width: 50%;
+        max-width: 100%;
     }
 
     .companies ul li {
-        margin-left: 1.5em;
-    }
-
-    .apps-section {
-        display: flex;
-        flex-direction: row;
-        margin-top: 2em;
-    }
-
-    .apps-section img.phone-img {
-        width: 55%;
-        height: 55%;
-        margin: -1em;
-        padding-right: 2em;
+        flex: 1;
+        min-width: auto;
+        max-width: none;
     }
 
     .apps-articles {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
     }
 
-    .apps-articles h1 {
-        width: 60%;
-    }
-
-    .smart-section article {
-        display: flex;
-    }
-
-    .smart-section article p {
-        margin-top: 2em;
-        border-left: 1px solid #eeeeee;
-        padding-left: 2em;
+    .apps-articles article:first-child {
+        grid-column: 1 / -1;
     }
 
     .performance {
-        display: flex;
-        flex-direction: row;
-        margin-top: 2.5em;
-    }
-
-    .performance article {
-        margin-left: 2em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
     }
 
     .design {
-        display: flex;
         flex-direction: row;
-        margin-top: 2.5em;
-    }
-
-    .design article {
-        margin-left: 2.5em;
+        align-items: center;
+        gap: 2em;
     }
 
     .design-img {
-        width: 50%;
-        height: 50%;
-        margin-right: 2em;
-    }
-
-    .choose-app {
-        margin: 0 auto;
         width: 45%;
-        text-align: center;
+        margin: 0;
     }
 
-    .choose-app h1 {
-        width: 70%;
-        margin: 1em auto;
+    .design article {
+        width: 55%;
     }
 
     .testimonials {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 2em;
-    }
-
-    .testimonials article {
-        width: 30%;
-        margin-bottom: 1em;
-    }
-    .features header {
-        margin-left: 3em;
-    }
-
-    .features header h2 {
-        width: 30%;
-    }
-
-    .features header p {
-        width: 45%;
-    }
-
-    .features header {
-        margin-bottom: 1em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
     }
 
     .features-main {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    .features-articles {
         flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: 1em;
-        width: 85%;
-    }
-
-    .features-main article {
-        width: 40%;
-        margin-left: 2em;
-    }
-
-    .see-all {
-        width: 15%;
-        height: 15%;
-        margin-left: 2em;
+        align-items: flex-start;
+        gap: 2em;
     }
 
     .phones {
         width: 40%;
-        height: 40%;
+    }
 
+    .payment {
+        width: 50%;
+    }
+
+    .payment a {
+        position: static;
+        display: inline;
+    }
+
+    .left-side, .right-side {
+        width: calc(50% - 0.5em);
+        margin: 0;
+    }
+
+    .payment-billing {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .customer-section article {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 2em;
+        align-items: center;
+    }
+
+    .customer-section img {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        width: 100%;
+        margin: 0;
+    }
+
+    .customer-section article h1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .customer-section article p {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .ceo-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .questions article li {
+        padding: 1.5em;
+    }
+
+    .download-stores {
+        flex-direction: row;
+        max-width: 400px;
+        margin: 1.5em auto;
+    }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .site-header {
+        padding: 3em 2em;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1em 0;
+    }
+
+    .header-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 3em;
+    }
+
+    .header-section article {
+        width: 45%;
+    }
+
+    .header-section article h1 {
+        font-size: 2.5em;
+        margin: 0.5em 0;
+    }
+
+    .header-section article p {
+        font-size: 1.05em;
+        line-height: 1.8;
+    }
+
+    .site-header img {
+        width: 55%;
+    }
+
+    .companies {
+        padding: 3em 2em;
+    }
+
+    .companies h4 {
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+
+    .companies ul li {
+        max-width: 150px;
+    }
+
+    .apps-section {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 0 2em;
+    }
+
+    .apps-articles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3em;
+    }
+
+    .apps-articles article {
+        padding: 2em;
+    }
+
+    .apps-articles article h2 {
+        font-size: 1.2em;
+    }
+
+    .smart-section {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 2em;
+    }
+
+    .smart-section h1 {
+        font-size: 2em;
+    }
+
+    .performance {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 2em;
+        gap: 3em;
+    }
+
+    .performance article {
+        padding: 2.5em 1.5em;
+    }
+
+    .design {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 2em;
+        gap: 3em;
+    }
+
+    .design article h2 {
+        font-size: 1.8em;
+    }
+
+    .choose-app-section {
+        background: #f5f6fa;
+        padding: 3em 2em;
+    }
+
+    .choose-app {
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .choose-app h1 {
+        font-size: 2em;
+    }
+
+    .testimonials {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 2em;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5em;
+    }
+
+    .testimonials article {
+        padding: 2em;
+        text-align: center;
+    }
+
+    .features {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 2em;
+    }
+
+    .features header h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
     }
 
     .features-articles {
-        display: flex;
-        flex-direction: row;
+        gap: 3em;
     }
+
+    .features-main {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5em;
+    }
+
+    .features-main article {
+        padding: 2em;
+    }
+
+    .phones {
+        width: 35%;
+        max-width: 400px;
+    }
+
+    .billing-section {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 2em;
+    }
+
+    .billing-section header {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .billing-section h2 {
+        font-size: 1.8em;
+    }
+
+    .payment {
+        width: 40%;
+    }
+
+    div.payment {
+        width: 45%;
+        padding: 1em;
+    }
+
+    .left-side, .right-side {
+        width: calc(50% - 1em);
+        padding: 2em;
+    }
+
+    .left-side h1, .right-side h1 {
+        font-size: 2em;
+    }
+
+    .payment-billing {
+        gap: 3em;
+    }
+
+    .customer-section {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 2em;
+    }
+
+    .customer-section article h1 {
+        font-size: 1.8em;
+    }
+
+    .ceo {
+        padding: 0;
+    }
+
+    .ceo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .questions {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 2em;
+    }
+
+    .questions header h1 {
+        font-size: 2em;
+    }
+
+    .questions-header {
+        padding: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    .download-section {
+        max-width: 1200px;
+        margin: 3em auto;
+        padding: 3em 2em;
+    }
+
+    .download-section h1 {
+        font-size: 1.8em;
+    }
+
+    .download-stores {
+        gap: 2.5em;
+        max-width: 600px;
+    }
+
+    .site-footer {
+        padding: 3em 2em;
+    }
+
+    .site-footer nav ul {
+        gap: 3em;
+        margin-bottom: 2em;
+    }
+
+    ul.social {
+        gap: 2em;
+        margin: 2em 0;
+    }
+
+    .social li a {
+        font-size: 1.5em;
+    }
+}
 
     .payment-billing {
         display: flex;
@@ -908,10 +1450,6 @@ ul.social {
     .billing-section h1 {
         font-weight: 600;
         color: #242f51;
-    }
-
-    .billing-section span {
-
     }
 
     .billing-section h2 {
@@ -945,6 +1483,11 @@ ul.social {
     }
 
     .left-side header, .right-side header {
+        background: -webkit-gradient(linear, left top, left bottom, from(#ffff), to(#f5f8fa));
+        background: -webkit-linear-gradient(#ffff, #f5f8fa);
+        background: -moz-linear-gradient(#ffff, #f5f8fa);
+        background: -ms-linear-gradient(#ffff, #f5f8fa);
+        background: -o-linear-gradient(#ffff, #f5f8fa);
         background: linear-gradient(#ffff, #f5f8fa);
         padding-bottom: 0.5em;
     }
@@ -1062,541 +1605,3 @@ ul.social {
         display: flex;
         flex-direction: row;
     }
-}
-@media(width: 375px)  {
-    .features-articles {
-        display: flex;
-        flex-direction: column;
-    }
-    .left-side, .right-side {
-        padding: 0;
-    }
-
-    .left-side header, .right-side header {
-        background: linear-gradient(#ffff, #f5f8fa);
-        padding-bottom: 0.5em;
-    }
-    .customer-section img {
-        width: 100%;
-        height: 100%;
-        margin: 2em auto;
-    }
-    .questions-header {
-        background: #f5f7fa;
-        padding: 1em;
-        margin-bottom: 2em;
-        margin-top: 2em;
-        margin-left: 2em;
-    }
-    .questions-article h2 {
-        margin-left: 1em;
-        color: #242f51;
-    }
-
-    .questions-article p {
-        width: 80%;
-        color: #abadb1;
-        margin-left: 2em;
-    }
-    div.payment{
-        width: 70%;
-    }
-    section.header-section article a {
-        margin-left: 1em;
-    }
-    ul.arrow-btn{
-        margin-top: 90%;
-    }
-    ul.social{
-        margin-left: -3em;
-    }
-}
-@media(width: 1024px) {
-    .header-section {
-        display: flex;
-    }
-
-    .header-section img {
-        width: 40%;
-        height: 40%;
-    }
-
-    .header-section article {
-        width: 40%;
-    }
-
-    section.header-section article span {
-        width: 75%;
-        margin-left: 0.5em;
-    }
-
-    .header-section article input {
-        margin-left: 0.75em;
-    }
-
-    .header-section article a {
-        margin-left: 1em;
-    }
-
-    .companies {
-        margin-top: 3em;
-    }
-
-    .companies ul {
-        display: flex;
-        margin-top: 3em;
-        margin-left: 2em;
-        justify-content: center;
-    }
-
-    .companies ul li {
-        margin-left: 1.5em;
-    }
-
-    .apps-section {
-        display: flex;
-        flex-direction: row;
-        margin-top: 2em;
-    }
-
-    .apps-section img.phone-img {
-        width: 55%;
-        height: 55%;
-        margin: -1em;
-        padding-right: 2em;
-    }
-
-    .apps-articles {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .apps-articles h1 {
-        width: 60%;
-    }
-    .smart-section {
-        width: 85%;
-    }
-    .smart-section article {
-        display: flex;
-        margin: 3em auto;
-    }
-
-    .smart-section article p {
-        margin-top: 2em;
-        border-left: 1px solid #eeeeee;
-        padding-left: 2em;
-    }
-
-    .performance {
-        display: flex;
-        flex-direction: row;
-        margin-top: 2.5em;
-        width: 92%;
-    }
-
-    .performance article {
-        margin-left: 2em;
-    }
-
-    .design {
-        display: flex;
-        flex-direction: row;
-        margin-top: 2.5em;
-    }
-
-    .design article {
-        margin-left: 2.5em;
-    }
-
-    .design-img {
-        width: 50%;
-        height: 50%;
-        margin-right: 2em;
-    }
-
-    .choose-app {
-        margin: 0 auto;
-        width: 45%;
-        text-align: center;
-    }
-
-    .choose-app h1 {
-        width: 70%;
-        margin: 1em auto;
-    }
-
-    .testimonials {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 2em;
-    }
-
-    .testimonials article {
-        width: 40%;
-        margin-bottom: 1em;
-        margin-left: 1em;
-    }
-    .features{
-        width: 100%;
-    }
-    .features header {
-        margin-left: 3em;
-    }
-
-    .features header h2 {
-        width: 35%;
-    }
-
-    .features header p {
-        width: 45%;
-    }
-
-    .features header {
-        margin-bottom: 1em;
-    }
-
-    .features-main {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: 1em;
-        width: 85%;
-    }
-
-    .features-main article {
-        width: 42%;
-        margin-left: 1em;
-    }
-    .features-articles{
-        margin: 2em auto;
-    }
-    .see-all {
-        width: 20%;
-        height: 20%;
-        margin-left: 2em;
-    }
-
-    .phones {
-        width: 40%;
-        height: 40%;
-
-    }
-
-    .features-articles {
-        display: flex;
-    }
-
-    .payment-billing {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-        width: 85%;
-    }
-
-    .billing-section h1 {
-        font-weight: 600;
-        color: #242f51;
-    }
-
-    .billing-section span {
-
-    }
-
-    .billing-section h2 {
-        width: 45%;
-        text-align: center;
-        margin: 2em auto;
-    }
-
-    .billing-section h3 {
-        color: #242f51;
-        font-weight: 600;
-    }
-
-    .billing-section p {
-        width: 70%;
-        text-align: center;
-        margin: 2em auto;
-        color: #b0b1b3;
-    }
-
-    .payment {
-        width: 25%;
-    }
-
-    .trial {
-        display: inline-block;
-    }
-
-    .left-side, .right-side {
-        padding: 0;
-    }
-
-    .left-side header, .right-side header {
-        background: linear-gradient(#ffff, #f5f8fa);
-        padding-bottom: 0.5em;
-    }
-
-    .left-side h1, .right-side h1 {
-        margin: 0;
-    }
-
-    .subscribe {
-        margin-bottom: 1em;
-    }
-
-    .trial-btn {
-        margin-top: 1em;
-    }
-
-    .customer-section {
-        display: flex;
-        flex-direction: row;
-        margin-top: 3em;
-    }
-
-    .customer-section img {
-        width: 60%;
-        height: 60%;
-        margin-left: -2em;
-    }
-
-    .customer-section article {
-        margin-left: 1em;
-    }
-
-    .customer-section h1 {
-        font-weight: 600;
-        color: #242f51;
-        width: 100%;
-    }
-
-    .customer-section article p {
-        color: #616368;
-    }
-
-    ul.arrow-btn {
-        margin-top: 55%;
-        font-size: 13px;
-        background: #fff;
-    }
-
-    .questions header h1 {
-        text-align: center;
-        margin: 2em 0 1em 0;
-        font-weight: 500;
-        color: #242f51;
-    }
-
-    .questions header p {
-        width: 60%;
-        text-align: center;
-        margin: 0 auto;
-        color: #616368;
-    }
-
-    .questions ul {
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    .questions-article h2 {
-        margin-left: 2em;
-        color: #242f51;
-    }
-
-    .questions-article p {
-        width: 90%;
-        color: #abadb1;
-    }
-
-    .questions-header {
-        width: 67%;
-        margin-left: 18%;
-        background: #f5f7fa;
-        padding: 1em;
-        margin-bottom: 2em;
-        margin-top: 2em;
-    }
-
-    .questions ul li {
-        color: #242f51;
-    }
-    .download-section{
-        position: relative;
-    }
-    .download-section h1 {
-        font-weight: 500;
-        color: #242f51;
-    }
-
-    .download-section p {
-        width: 70%;
-        color: #abadb1;
-    }
-
-    .download-stores {
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .download-bg {
-        width: 60%;
-        position: absolute;
-        bottom: -2em;
-        left: 57%;
-    }
-    .site-footer nav ul{
-        display: flex;
-        flex-direction: row;
-    }
-}
-@media(width: 834px) {
-
-    .header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 2em;
-    }
-    .site-header nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-    section.header-section article span{
-        width: 50%;
-        margin: 0 auto;
-    }
-    .site-header img{
-        width: 50%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
-    .header-section article h1{
-        font-weight: 600;
-        color: #242f51;
-        width: 75%;
-        margin: 1em auto;
-    }
-    .header-section article p{
-        width: 70%;
-        margin: 0 auto;
-    }
-    .header-section article input{
-       margin-left: 5em;
-        margin-top: 1.5em;
-    }
-    .header-section article a{
-        margin-left: 1em;
-    }
-    .features-articles{
-        display: flex;
-        flex-direction: column;
-    }
-    .payment{
-        width: 30%;
-    }
-    .left-side, .right-side {
-        padding: 0;
-    }
-
-    .left-side header, .right-side header {
-        background: linear-gradient(#ffff, #f5f8fa);
-        padding-bottom: 1em;
-    }
-
-    .left-side h1, .right-side h1 {
-        margin: 0;
-        font-weight: 600;
-    }
-    .right-side a {
-        margin-bottom: 1em;
-    }
-    .trial-btn{
-        margin-bottom: 1em;
-    }
-    .left-side h3, .right-side h3{
-        font-weight: 500;
-    }
-    .customer-section img{
-        margin: 2em auto;
-    }
-    .arrow-btn{
-        margin-top: 35%;
-    }
-    .questions-article h2 {
-        margin-left: 2em;
-        color: #242f51;
-    }
-
-    .questions-article p {
-        width: 90%;
-        color: #abadb1;
-    }
-
-    .questions-header {
-        width: 95%;
-        margin-left: 5%;
-        background: #f5f7fa;
-        padding: 1em;
-        margin-bottom: 2em;
-        margin-top: 2em;
-    }
-    .questions header h1{
-        margin-left: 1.5em;
-    }
-    .download-section h1{
-        font-weight: 600;
-        color:#242f51;
-    }
-    .download-section p{
-        color: #abadb1;
-    }
-}
-@media(min-width: 1920px) {
-    #nav-bar {
-        display: none;
-    }
-    #site-navigation{
-        display: flex;
-    }
-    section.header-section img{
-        width: 20%;
-        height: 20%;
-        margin-left: -4em;
-    }
-    ul.arrow-btn{
-        margin-top: 30%;
-    }
-    .left-side header, .right-side header{
-        padding: 5em;
-    }
-    .customer-section article h1 {
-        width: 70%;
-    }
-    .questions header p{
-        width: 40%;
-    }
-    .trial {
-        margin-left: 2em;
-    }
-    .download-section{
-        margin-top: 10%;
-        position: relative;
-    }
-    .download-section p{
-        width: 60%;
-    }
-    .download-bg{
-        position: absolute;
-        top: -73%;
-    }
-    div.payment{
-        width: 25%;
-    }
-}
